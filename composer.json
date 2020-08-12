@@ -1,0 +1,46 @@
+{
+    "name": "dispify/weaver",
+    "type": "library",
+    "description": "Simple Dependency Injection container with autoconfiguration and autowiring",
+    "keywords": ["dependency injection", "container", "psr-11"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Disparity",
+            "email": "disparity-github@yandex.ru"
+        }
+    ],
+    "provide": {
+        "psr/container-implementation": "1.0"
+    },
+    "suggest": {
+        "dispify/class_aliases": "For autowiring by class aliases"
+    },
+    "autoload": {
+        "psr-4": {
+            "Dispify\\Weaver\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Dispify\\Weaver\\Tests\\": "tests/"
+        }
+    },
+    "config": {
+        "platform": {
+            "php": "7.1"
+        }
+    },
+    "minimum-stability": "dev",
+    "require": {
+        "php": "^7.1",
+        "psr/container": "^1.0@dev"
+    },
+    "require-dev": {
+        "dispify/class_aliases": "dev-master",
+        "phpunit/phpunit": "^7.5"
+    },
+    "scripts": {
+        "test": "@composer exec -v -- phpunit"
+    }
+}
